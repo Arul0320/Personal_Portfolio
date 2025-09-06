@@ -13,10 +13,10 @@ const Projects = () => {
     },
     {
       id: 2,
-      title: 'Loan Approval Prediction Model',
+      title: 'Invoice Billing Application (with GST/Tax)',
       description:
-        'Developed a model using regression analysis to predict optimal interest rates with 90% accuracy. The system helped reduce default rates by 15% and improved profitability through smarter lending decisions.',
-      image: 'assets/images/loan.jpeg',
+        'A desktop or web-based billing system where users (shopkeepers, small businesses) can generate invoices with GST calculation (CGST, SGST, IGST), save data, and export invoices to PDF/Excel.',
+      image: 'assets/images/invoice.avif',
       technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'Flask', 'SQLAlchemy', 'MySQL', 'Git'],
       githubUrl: 'https://github.com/arul0320/ReadersDot',
     },

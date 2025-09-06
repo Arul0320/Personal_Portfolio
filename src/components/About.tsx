@@ -28,6 +28,17 @@ const About = () => {
 
   const experience = [
     {
+      title: 'Python Developer',
+      company: 'Thiran 360AI',
+      location: 'Remote',
+      period: '01/2025 - 06/2025',
+      responsibilities: [
+        'Assisted in developing Python-based web applications and backend logic under mentor guidance.',
+        'Supported the creation of REST APIs and worked with Django and libraries like Pandas and NumPy for data handling.',
+        'Wrote clean, testable code and gained hands-on experience in debugging, version control, and basic deployment processes'
+      ]
+    },
+        {
       title: 'Full Stack Developer',
       company: 'Virtusa',
       location: 'Remote',
