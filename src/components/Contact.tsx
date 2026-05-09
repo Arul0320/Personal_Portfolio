@@ -26,14 +26,19 @@ const Contact = () => {
     setIsSubmitting(true);
 
     if (form.current) {
-      emailjs.sendForm('service_3zrruzk', 'template_f6dx6c6', form.current, 'KZnd3RJcgnvtwI85b')
+      emailjs.sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID || 'service_3zrruzk',
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'template_f6dx6c6',
+        form.current,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'KZnd3RJcgnvtwI85b'
+      )
         .then((result) => {
-            console.log(result.text);
-            alert('Message sent successfully!');
-            setFormData({ name: '', email: '', subject: '', message: '' });
+          console.log('Email sent successfully:', result.text);
+          alert('Message sent successfully!');
+          setFormData({ name: '', email: '', subject: '', message: '' });
         }, (error) => {
-            console.log(error.text);
-            alert('An error occurred, please try again.');
+          console.error('Email send failed:', error);
+          alert(`Failed to send message: ${error.text || 'Please check your EmailJS configuration.'}`);
         })
         .finally(() => {
           setIsSubmitting(false);
@@ -60,7 +65,7 @@ const Contact = () => {
       value: 'Salem, Tamil Nadu',
       href: 'https://www.google.com/maps/place/Salem,+Tamil+Nadu',
     },
-    
+
   ];
 
   const socialLinks = [
